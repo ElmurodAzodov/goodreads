@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'goodreads.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'goodreads',  # Ma'lumotlar bazasi nomi
+        'USER': 'postgres',   # Foydalanuvchi nomi
+        'PASSWORD': 'program',# Foydalanuvchi paroli
+        'HOST': '127.0.0.1',  # Mahalliy host
+        'PORT': '5432',       # Port raqami
     }
 }
 
